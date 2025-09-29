@@ -1,7 +1,7 @@
 const LOGIN_URL = "https://testapi-touo.onrender.com/api/auth/login";
 const spinner = document.getElementById("spinner");
 const loginBtn = document.getElementById("loginBtn");
-const errorBox = document.getElementById("errorBox"); // ✅ FIXED
+const errorBox = document.getElementById("errorBox"); 
 
 loginBtn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -9,7 +9,7 @@ loginBtn.addEventListener("click", function (e) {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
 
-  errorBox.style.display = "none"; // Hide old errors
+  errorBox.style.display = "none"; 
 
   if (!email || !password) {
     errorBox.innerText = data.message || "Please enter both email and password.";
@@ -17,7 +17,7 @@ loginBtn.addEventListener("click", function (e) {
     return;
   }
 
-  // Show spinner, disable button
+  
   spinner.style.display = "block";
   loginBtn.disabled = true;
   loginBtn.innerText = "Logging in...";
@@ -39,12 +39,12 @@ loginBtn.addEventListener("click", function (e) {
       return;
     }
 
-    // Save data to localStorage
+  
     localStorage.setItem("token", data.token);
     localStorage.setItem("currentUser", JSON.stringify(data.user));
     localStorage.setItem("userId", data.user._id);
 
-    // Redirect user
+    
     if (data.user.role === "admin") {
       window.location.href = "/pages/dashboard.html";
     } else if(data.user.role === "staff") {
