@@ -1,4 +1,13 @@
 Employee Management Platform
+log in details
+ ADMIN login 
+  email: deborahmomodu999@gmail.com
+  password: deborah
+
+  STAFF login
+  email : onyeka999@gmail.com
+  password : onyeka
+            
 
 A responsive, user-friendly employee management platform with separate access for admins and staff. Admins manage staff records from the dashboard, while staff log in directly to their profile page to view and manage their information.
 
